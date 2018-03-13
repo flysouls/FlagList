@@ -1,8 +1,29 @@
 {
+  "name": "flaglist",
+  "description": "FlagList_test_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
   "scripts": {
-    "start": "node app/app.js"
+    "start": "cross-env process.env.NODE_ENV=dev&&node app/app.js",
+    "test": "cross-env process.env.NODE_ENV=test&&node app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flysouls/FlagList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flysouls/FlagList/issues"
   },
   "dependencies": {
-    "koa": "^2.4.1"
-  }
+    "cross-env": "^5.1.4",
+    "koa": "^2.4.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "node-yaml-config": "^0.0.4",
+    "nunjucks": "^3.1.2"
+  },
+  "homepage": "https://github.com/flysouls/FlagList#readme"
 }
