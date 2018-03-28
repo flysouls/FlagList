@@ -8,6 +8,7 @@ const app = new Koa();
 const nunjucks = require('nunjucks');
 const CONFIG = require('./config');
 
+console.log(NODE_ENV);
 // 静态文件
 const koaStatic = require("koa-static");
 app.use(koaStatic(path.join(__dirname, '../static')));

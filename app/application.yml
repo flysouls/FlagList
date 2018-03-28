@@ -1,70 +1,7 @@
 default:
-    appName: community-backend
-    domain: backend.daodao.huitax.com
-    logdir: /home/logs/community_backend
+    appName: Flaglist
+    domain: www.male315.cn
     server:
-        port: 8050
+        port: 3000
 dev:
-    gateway-service: 
-        ip: 10.0.101.5
-        port: 8010
-    server:
-        port: 8050
-    datasource:
-        host: 10.0.101.2
-        port: 3306
-        database: community
-        username: root
-        password: '123456'
-        pool:
-            max: 5
-            min: 0
-            idle: 10000
-        logging: true 
-    redis:
-        host: 10.0.101.10
-        port: 6379
-        password: huitaxredis
-test:
-    gateway-service: 
-        ip: 10.0.101.17
-        port: 8010
-    server:
-        port: 8050
-    datasource:
-        host: 10.0.101.2
-        port: 3306
-        database: community
-        username: root
-        password: '123456'
-        pool:
-            max: 50
-            min: 1
-            idle: 10000
-        logging: false
-    redis:
-        host: 10.0.101.10
-        port: 6379
-        password: huitaxredis
-production:
-    gateway-service: 
-        ip: 118.31.103.36
-        port: 8010
-    server:
-        port: 8050
-    datasource:
-        host: rm-bp10nvt0xl5u4azmvo.mysql.rds.aliyuncs.com
-        port: 3306
-        database: community
-        username: community
-        password: K9k3*77k
-        pool:
-            max: 100
-            min: 1
-            idle: 10000
-        logging: false
-    redis:
-        host: 10.0.101.10
-        port: 6379
-        password: huitaxredis
- 
+    server: 3000

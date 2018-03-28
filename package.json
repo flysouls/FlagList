@@ -5,8 +5,8 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "cross-env process.env.NODE_ENV=dev&&node app/app.js",
-    "test": "cross-env process.env.NODE_ENV=test&&node app/app.js"
+    "start": "cross-env NODE_ENV=dev && node app/app.js",
+    "test": "cross-env NODE_ENV=test && node app/app.js"
   },
   "repository": {
     "type": "git",
