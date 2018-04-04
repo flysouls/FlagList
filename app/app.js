@@ -8,10 +8,10 @@ const app = new Koa();
 const nunjucks = require('nunjucks');
 const CONFIG = require('./config');
 
-console.log(NODE_ENV);
 // 静态文件
 const koaStatic = require("koa-static");
-app.use(koaStatic(path.join(__dirname, '../static')));
+// app.use(koaStatic(path.join(__dirname, '../static')));
+app.use(koaStatic(path.join(__dirname, '../public')));
 
 // html模板引擎
 const nj = (config = {}) => {
@@ -40,7 +40,7 @@ const nj = (config = {}) => {
 app.use(nj({
     debug: true,
     ext: 'njk',
-    path: path.resolve(__dirname, "../static"),
+    path: path.resolve(__dirname, "../public/dist/template"),
     njConfig: {
         watch: true
     }
