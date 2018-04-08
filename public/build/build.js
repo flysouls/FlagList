@@ -1,7 +1,11 @@
 'use strict'
 require('./check-versions')()
 
-process.env.NODE_ENV = 'production'
+// process.env.NODE_ENV = 'production'
+
+const optimist =require('optimist');
+console.log(optimist.argv.env);
+process.env.NODE_ENV=optimist.argv.env;
 
 const ora = require('ora')
 const rm = require('rimraf')
@@ -11,17 +15,15 @@ const webpack = require('webpack')
 const config = require('../config')
 const webpackConfig = require('./webpack.prod.conf')
 
-const spinner = ora('building for production...')
+const spinner = ora(`building for ${process.env.NODE_ENV}...`)
 spinner.start()
 
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), i=>{
   if (i) throw i
-  console.log("\njs相关文件已删除.");
 });
 
 rm(path.resolve(config.build.assetsRoot, "template"), i=>{
   if (i) throw i
-  console.log("模板文件已删除.");
 });
 
 webpack(webpackConfig, (err, stats) => {
@@ -37,7 +39,7 @@ webpack(webpackConfig, (err, stats) => {
 
   if (stats.hasErrors()) {
     console.log(chalk.red('  Build failed with errors.\n'))
-    process.exit(1)
+    // process.exit(1)
   }
 
   console.log(chalk.cyan('  Build complete.\n'))

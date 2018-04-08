@@ -1,10 +1,17 @@
-import Vue from 'vue'
-import App from './App'
+import BaseModule from "../../baseModule";
+import App from './App';
+class Main extends BaseModule{
 
-Vue.config.productionTip = false
+}
+new Main().init({
+    template: '<app :options="options"></app>',
+    el: '#app',
+    data: function () {
+        return {
+            options: {
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+            }
+        }
+    },
+    components: { App }
+});

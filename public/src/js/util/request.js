@@ -4,9 +4,9 @@ import extendAxios from './extendAxios';
 //添加异步请求对象 axios
 Vue.use(VueAxios, extendAxios);
 //页面顶部进度条
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
-NProgress.configure({ showSpinner: false });
+// import NProgress from 'nprogress';
+// import 'nprogress/nprogress.css';
+// NProgress.configure({ showSpinner: false });
 
 function errorResult(response) {
     let result={};

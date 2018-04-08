@@ -5,17 +5,22 @@
   "author": "male<malezyy@126.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "node build/build.js --env dev",
     "start": "npm run dev",
-    "test": "npm run unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js --env production",
+    "ana": "npm_config_report=true npm run build"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "glob": "^7.1.2",
     "iview": "^2.12.0",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.5",
-    "vue": "^2.5.16"
+    "moment": "^2.22.0",
+    "numeral": "^2.0.6",
+    "optimist": "^0.6.1",
+    "vue": "^2.5.16",
+    "vue-axios": "^2.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
