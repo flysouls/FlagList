@@ -1,4 +1,4 @@
-// import '../scss/base.scss';
+import '../scss/base.scss';
 // import '../scss/module.scss';
 // import '../scss/unit.scss';
 // import 'element-ui/lib/theme-default/index.css';
@@ -15,7 +15,7 @@ import Cookies from 'js-cookie';
 // import VuePreview  from "vue-preview";
 // Vue.use(VuePreview);
 Vue.use(RequestPlugin);
-Vue.use(iView);
+// Vue.use(iView);
 // Vue.use(ElementUI);
 
 //全局混合

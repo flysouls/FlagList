@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <h2>我的测试网站1234567890-</h2>
+    <h2>我的个人网站-</h2>
     <h1>{{a}}</h1>
-    <a @click="show">点我</a>
+    <h3>生活就像在黑屋子里洗衣服，你不知道洗干净没有，只能一遍一遍的洗。</h3>
+    <h3>直到那一天到来，你会发现认真洗过的衣服很干净，以后你每次穿都会感谢当初洗衣服的日子。</h3>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
 
 export default {
   name: 'App',
   data: () => {
     return {
-      a:"aaaa"
+      a:"male"
     }
   },
   watch:{
@@ -24,10 +24,6 @@ export default {
     console.log("页面通了");
   },
   methods:{
-    show(){
-      var xx = [1,2,3,4,5,6,7,7];
-      alert(this.sum(xx))
-    }
   },
   components: {
   }
