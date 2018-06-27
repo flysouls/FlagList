@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Ionicons";
+  src: url('../fonts/iconfont.eot?t=1481782193096'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1481782193096#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1481782193096') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1481782193096') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1481782193096#iconfont') format('svg'); /* iOS 4.1- */
+}
+.icon {
+  display: inline-block;
+  font-family: "Ionicons";
+  // speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ion-md-weixin:before,
+.ion-ios-weixin:before,
+.ion-ios-weixin-outline:before {
+  content: "\e603";
+}
