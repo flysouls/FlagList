@@ -79,7 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
           module.resource &&
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
-            path.join(__dirname, '../node_modules/iview')
+            path.join(__dirname, '../node_modules/_vue')
           ) === 0
         )
       }

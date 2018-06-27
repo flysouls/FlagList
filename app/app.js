@@ -56,11 +56,12 @@ app.on('error', (err, ctx) => {
 })
 
 //路由
-const { login, welcome, help, test } = require("./router");
+const { login, welcome, help, test, firework } = require("./router");
 app.use(login.routes());
 app.use(welcome.routes());
 app.use(help.routes());
 app.use(test.routes());
+app.use(firework.routes());
 
 const port = 3000;
 app.listen(port, () => {
