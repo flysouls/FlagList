@@ -49,19 +49,29 @@ app.use(nj({
 // app.use(ctx => {
 //     ctx.body = 'Hello World';
 // });
-
+const defaultPage = () => {
+    return async(ctx, next) => {
+        if(ctx.response.status !== 200){
+            ctx.redirect('/firework');
+        }
+    }
+};
 
 app.on('error', (err, ctx) => {
     console.log(err)
 })
 
 //路由
-const { login, welcome, help, test, firework } = require("./router");
+const { login, welcome, help, test, firework, error } = require("./router");
 app.use(login.routes());
 app.use(welcome.routes());
 app.use(help.routes());
 app.use(test.routes());
 app.use(firework.routes());
+app.use(error.routes());
+
+
+app.use(defaultPage());
 
 const port = 3000;
 app.listen(port, () => {
