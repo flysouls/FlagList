@@ -1,5 +1,5 @@
 import BaseModule from "../../baseModule";
-import App from './App';
+import App from './app';
 class Main extends BaseModule{
 
 }
