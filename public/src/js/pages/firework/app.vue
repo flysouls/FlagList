@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas" @click="full"></canvas>
+  <canvas id="canvas" @click="full" style="background:#040454"></canvas>
 </template>
 
 <script>
