@@ -57,9 +57,6 @@ const defaultPage = () => {
     }
 };
 
-app.on('error', (err, ctx) => {
-    console.log(err)
-})
 
 //路由
 const { login, welcome, help, test, firework, error } = require("./router");
@@ -72,6 +69,15 @@ app.use(error.routes());
 
 
 app.use(defaultPage());
+
+
+// app.on('error', (err, ctx) => {
+//     console.log(err);
+//     setTimeout(ctx.redirect('/firework'),1000)
+// })
+app.on('error', (err, ctx) => {
+  console.error('server error', err, ctx)
+});
 
 const port = 3000;
 app.listen(port, () => {
