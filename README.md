@@ -6,11 +6,11 @@
 使用方法的话 
 ```
    1.从git检出；
-   2.分别在“/”和“/public/” 下执行 npm install && npm start；
+   2.分别在“Flaglist/”和“Flaglist/public/” 下执行 npm install && npm start；
    3.等npm跑完就可以打开浏览器看效果了，默认是3000端口；
-   eg: 现在前端部分打包特别慢（配置是抄别人的）。。。待优化...
+   eg: 现在前端部分打包特别慢（配置是抄别人的）。。。待优化...至于这个名字，因为当时想做一个立Flag的系统，后来夭折了 ...QAQ...
 ```
 
 
-eg：说一句题外话.虽然router写了很多，但是 template 并没有，所以事实上只有2个页面。。。。即 "/firework"和"/welcome"，并且如果路径有误的话，会重定向到"/firework"
-hiahiahia～
+#### eg：说一句题外话.虽然router写了很多，但是 template 并没有，所以事实上只有2个页面。。。。即 "/firework"和"/welcome"，并且如果路径有误或者remplate没找到的话，会重定向到"/firework"
+##### hiahiahia～
