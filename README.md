@@ -12,5 +12,5 @@
 ```
 
 
-#### eg：说一句题外话.虽然router写了很多，但是 template 并没有，所以事实上只有2个页面。。。。即 "/firework"和"/welcome"，并且如果路径有误或者remplate没找到的话，会重定向到"/firework"
+#### eg：说一句题外话.虽然router写了很多，但是 template 并没有，所以事实上只有2个页面。。。。即 "/firework"和"/welcome"，并且如果路径有误或者template没找到的话，会重定向到"/firework"
 ##### hiahiahia～
