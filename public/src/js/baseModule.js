@@ -3,8 +3,8 @@ import '../scss/base.scss';
 // import '../scss/unit.scss';
 // import 'element-ui/lib/theme-default/index.css';
 
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';    // 使用 CSS
+// import iView from 'iview';
+// import 'iview/dist/styles/iview.css';    // 使用 CSS
 // import '../scss/iview.scss';
 // import "babel-polyfill";
 import Vue from 'vue';

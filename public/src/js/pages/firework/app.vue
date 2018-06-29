@@ -319,10 +319,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
+  body{
+    margin: 0
+  }
   canvas {
     width: 100%;
     height: 100%;
-    background: url('/src/assets/star.jpg');
+    background: #040454;
   }
 </style>
