@@ -6,7 +6,7 @@
       <h5>{{a}}</h5>
       <h5>{{b}}</h5>
       <p v-for="item in c">
-        <span>{{item.text}}</span>: <a :href="item.src" target="_blank">{{item.src}}</a>
+        <span>{{item.text}}</span>: <a :href="item.src" :target="item.target">{{item.src.replace('mailto:','')}}</a>
       </p>
       <h3 v-html='text'></h3>
     </div>
