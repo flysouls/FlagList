@@ -26,7 +26,7 @@ export default {
         {text: 'e-mail', src: 'mailto:malezyy@126.com', target:'_self'},
       ],
       text: window.p_text,
-      title: window.p_title,
+      title: '' || window.p_title,
       PR: window.devicePixelRatio || 1, // dpr
       WIDTH: window.innerWidth,
       HEIGHT: window.innerHeight,
