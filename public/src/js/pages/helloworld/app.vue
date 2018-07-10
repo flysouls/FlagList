@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <canvas id="canvas"></canvas>
-    <h2>{{title}}</h2>
-    <h5>{{a}}</h5>
-    <h3>遍一遍的洗。&lt;br&gt;直到那</h3>
-    <h3 v-html='text'></h3>
+    <div class="container">
+      <h2>{{title}}</h2>
+      <h5>{{a}}</h5>
+      <h5>{{b}}</h5>
+      <p v-for="item in c">
+        <span>{{item.text}}</span>: <a :href="item.src" target="_blank">{{item.src}}</a>
+      </p>
+      <h3 v-html='text'></h3>
+    </div>
   </div>
 </template>
 
@@ -15,6 +20,11 @@ export default {
   data: () => {
     return {
       a: "对，你没看错，就是空白页面",
+      b: '本页面仅作为开发展示使用',
+      c: [
+        {text: 'git', src: 'https://github.com/flysouls', target:'_blank'},
+        {text: 'e-mail', src: 'mailto:malezyy@126.com', target:'_self'},
+      ],
       text: window.p_text,
       title: window.p_title,
       PR: window.devicePixelRatio || 1, // dpr
@@ -49,7 +59,9 @@ export default {
       this.context.clearRect(0, 0, this.WIDTH, this.HEIGHT);
       //定义最左边俩个点的纵向跨度为2F
       this.q=[{x: 0,y: this.HEIGHT * 0.7 + this.F},{x: 0,y: this.HEIGHT * 0.7 - this.F}];
-      while(this.q[1].x < this.WIDTH + this.F) this.draw(this.q[0], this.q[1]);
+      while(this.q[1].x < this.WIDTH + this.F) {
+        this.draw(this.q[0], this.q[1]);
+      }
     },
     random(){
       return Math.random();
@@ -57,7 +69,7 @@ export default {
     y(p){
       // z()*2-1 小于0的几率较大 => y将减小
       var t = p + (this.random()*2 - 1.1) * this.F;
-      return (t > this.HEIGHT || t < 0) ? y(p) : t;
+      return (t > this.HEIGHT || t < 0) ? this.y(p) : t;
     },
     c2c(cn){
       //将10进制转为16进制
@@ -68,7 +80,7 @@ export default {
         this.context.moveTo(i.x, i.y);
         this.context.lineTo(j.x, j.y);
         var k = j.x + (this.random()*2-0.25)*this.F,
-            n = this.random(j.y);
+            n = this.y(j.y);
         this.context.lineTo(k, n);
         this.context.closePath();
         this.r += 0.2;
@@ -97,10 +109,13 @@ export default {
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 </style>
