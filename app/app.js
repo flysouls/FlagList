@@ -51,7 +51,7 @@ app.use(nj({
 // });
 const defaultPage = () => {
     return async(ctx, next) => {
-        if(ctx.response.status !== 200){
+        if(ctx.response.status >= 400){
             ctx.redirect('/firework');
         }
     }
