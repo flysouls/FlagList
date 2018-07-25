@@ -27,7 +27,7 @@ rm(path.resolve(config.build.assetsRoot, "template"), i=>{
 });
 
 webpack(webpackConfig, (err, stats) => {
-  spinner.stop()
+  spinner.stop();
   if (err) throw err
   process.stdout.write(stats.toString({
     colors: true,

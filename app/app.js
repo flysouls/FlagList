@@ -59,12 +59,13 @@ const defaultPage = () => {
 
 
 //路由
-const { login, welcome, help, test, firework, error } = require("./router");
+const { login, welcome, help, test, firework, error, resume } = require("./router");
 app.use(login.routes());
 app.use(welcome.routes());
 app.use(help.routes());
 app.use(test.routes());
 app.use(firework.routes());
+app.use(resume.routes());
 app.use(error.routes());
 
 
